@@ -31,9 +31,7 @@ public class ProductRepository {
         } else return result;
     }
 
-    public void removeByID(int id) {
-        try {
-            findByID(id);
+    public void removeByID(int id) { findByID(id);
             int length = products.length - 1;
             Product[] tmp = new Product[length];
             int index = 0;
@@ -44,9 +42,6 @@ public class ProductRepository {
                 }
                 products = tmp;
             }
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+}
 }
 
