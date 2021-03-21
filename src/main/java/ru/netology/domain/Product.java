@@ -14,12 +14,12 @@ public class Product {
     }
 
 
-//    public boolean matches(Product product, String search) {
-//        if (product.getName().equalsIgnoreCase(search)) {
-//            return true;
-//        }
-//        return false;
-//    }
+    public boolean matches(Product product, String search) {
+        if (product.getName().equalsIgnoreCase(search)) {
+            return true;
+        }
+        return false;
+    }
 
     public Product(int id, String name, int price) {
         this.id = id;

@@ -20,7 +20,7 @@ public class ProductManager {
         return repository.findAll();
     }
 
-    public Product[] findByID(int id) {
+    public Product findByID(int id) {
         return repository.findByID(id);
     }
 

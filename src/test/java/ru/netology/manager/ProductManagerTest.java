@@ -66,14 +66,14 @@ class ProductManagerTest {
 
     @Test
     public void shouldFindByID() {
-        Product[] expected = new Product[]{secondBook};
-        Product[] actual = manager.findByID(2);
-        assertArrayEquals(expected, actual);
+        Product expected = secondBook;
+        Product actual = manager.findByID(2);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void shouldNotFindByNonexistentID() {
-        assertThrows(NotFoundException.class, () -> manager.findByID(nonexistentID));
+        assertThrows(NotFoundException.class, () -> manager.removeByID(nonexistentID));
     }
 
     @Test
