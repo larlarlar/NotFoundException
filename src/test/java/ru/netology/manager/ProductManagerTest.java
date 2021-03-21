@@ -86,7 +86,7 @@ class ProductManagerTest {
 
     @Test
     public void shouldNotRemoveByNonexistentID() {
-        manager.removeByID(nonexistentID);
+        assertThrows(NotFoundException.class, () -> manager.removeByID(nonexistentID));
         Product[] expected = new Product[]{firstBook, secondBook, firstSmatphone, secondSmatphone};
         Product[] actual = manager.getAll();
         assertArrayEquals(expected, actual);
